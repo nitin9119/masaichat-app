@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masai CHAT-APP</title>
+    <!-- conecting to the server where socket io is running -->
+    <script defer src="http://localhost:3002/socket.io/socket.io.js"></script>
+    <!-- client side script  -->
+    <script defer src="script.js"></script>
+    <style>
+      body {
+        height: 100vh;
+      }
+      #send-container {
+        width: 350px;
+        padding: 10px;
+        border: 1px solid blue;
+        border-radius: 4px;
+        position: absolute;
+        top: 80%;
+        left: 30%;
+        text-align: right;
+      }
+      #message-container {
+        width: 350px;
+        padding: 10px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message-container"></div>
+    <form id="send-container">
+      <input type="text" id="message-input" />
+      <button type="submit" id="send-button">send</button>
+    </form>
+  </body>
+</html>
